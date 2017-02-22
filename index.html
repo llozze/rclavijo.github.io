@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Galeria Portfolio</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Galeria Portfolio</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700" rel="stylesheet">
@@ -54,14 +54,15 @@
     </div>
 
     <div class="portfolio-menu text-center">
-        <a href="#">ALL</a>
-        <a href="#">DESIGN</a>
-        <a href="#">BRANDING</a>
-        <a href="#">PHOTOGRAPHY</a>
+        <a href="javascript:void(0)" onClick="$('.works_container').isotope({ filter: '*' });" >ALL</a>
+        <a href="javascript:void(0)" onClick="$('.works_container').isotope({ filter: '.filter_design' });" >DESIGN</a>
+        <a href="javascript:void(0)" onClick="$('.works_container').isotope({ filter: '.filter_branding' });" >BRANDING</a>
+        <a href="javascript:void(0)" onClick="$('.works_container').isotope({ filter: '.filter_photography' });" >PHOTOGRAPHY</a>
 
     </div>
 
-        <div class="col-lg-4 col-sm-6">
+    <div class="works_container">
+        <div class="col-lg-4 col-sm-6 work_item filter_design">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -71,7 +72,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_design">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -81,7 +82,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_branding">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -91,7 +92,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_branding">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -101,7 +102,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_branding">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -111,7 +112,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -121,7 +122,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -131,7 +132,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -141,7 +142,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
           <div class="hovereffect">
             <img src="2.jpg" class="img-responsive" alt="">
             <div class="overlay">
@@ -150,7 +151,38 @@
             </div>
           </div>
         </div>
-    
+
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
+          <div class="hovereffect">
+            <img src="2.jpg" class="img-responsive" alt="">
+            <div class="overlay">
+              <h2>CATEGORY</h2>
+              <p>description</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
+          <div class="hovereffect">
+            <img src="2.jpg" class="img-responsive" alt="">
+            <div class="overlay">
+              <h2>CATEGORY</h2>
+              <p>description</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 work_item filter_photography">
+          <div class="hovereffect">
+            <img src="2.jpg" class="img-responsive" alt="">
+            <div class="overlay">
+              <h2>CATEGORY</h2>
+              <p>description</p>
+            </div>
+          </div>
+        </div>
+
+    </div> 
 
   </div>
 </section>
@@ -199,8 +231,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="isotope.pkgd.min.js"></script>
 
 
+    <script type="text/javascript">
+      $('.works_container').isotope({
+      itemSelector: '.work_item',
+      layoutMode: 'fitRows'
+      });
+    </script>
 
 
 </body>
